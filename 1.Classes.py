@@ -7,7 +7,7 @@ class Endereco:
         self.logadouro = logadouro
         self.numero = numero
 
-    def exibir_dados(self) -> str: 
+    def __str__(self) -> str: 
         return f"Logadouro: {self.logadouro}\nNúmero: {self.numero}" 
 
 
@@ -22,14 +22,15 @@ class Aluno:
         self.nome = nome
         self.idade = idade
         self.endereco = endereco
-
-    def exibir_dados(self) -> str: 
-        return f"Nome: {self.nome}\nIdade: {self.idade}\nEndereco:{self.endereco.exibir_dados()}" 
+        
+    def __str__(self) -> str:
+        return f"Nome: {self.nome}\nIdade: {self.idade}\nEndereco:{self.endereco}" 
+        
 
 
 # Instanciar classe.
 aluno = Aluno("Marta",22, Endereco("Rua maluca", 22))
 #print(f"Nome:  {aluno.nome}")
 #print(f"Idade:  {aluno.idade}")
-print(aluno.exibir_dados())
+print(aluno)
 
