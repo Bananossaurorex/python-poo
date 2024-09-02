@@ -22,7 +22,7 @@ class Aluno:
         self.nome = nome
         self.idade = idade
         self.endereco = endereco
-        
+
     def __str__(self) -> str:
         return f"Nome: {self.nome}\nIdade: {self.idade}\nEndereco:{self.endereco}" 
         
@@ -30,7 +30,9 @@ class Aluno:
 
 # Instanciar classe.
 aluno = Aluno("Marta",22, Endereco("Rua maluca", 22))
+aluno2 = Aluno("Marto",12, Endereco("Rua Sã",66))
 #print(f"Nome:  {aluno.nome}")
 #print(f"Idade:  {aluno.idade}")
 print(aluno)
+print(aluno2)
 
